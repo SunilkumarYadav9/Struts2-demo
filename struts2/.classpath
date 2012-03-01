@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources"/>
+	<classpathentry kind="src" path="src/com/struts2/liqx/stu"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+	<classpathentry kind="con" path="org.maven.ide.eclipse.MAVEN2_CLASSPATH_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="F:/projects java/struts2/src/main/webapp/WEB-INF/lib/asm-3.3.jar"/>
+	<classpathentry kind="lib" path="F:/projects java/struts2/src/main/webapp/WEB-INF/lib/asm-commons-3.3.jar"/>
+	<classpathentry kind="lib" path="F:/projects java/struts2/src/main/webapp/WEB-INF/lib/asm-tree-3.3.jar"/>
+	<classpathentry kind="lib" path="F:/projects java/struts2/src/main/webapp/WEB-INF/lib/c3p0-0.9.1.2.jar"/>
+	<classpathentry kind="lib" path="F:/projects java/struts2/src/main/webapp/WEB-INF/lib/commons-fileupload-1.2.2.jar"/>
+	<classpathentry kind="lib" path="F:/projects java/struts2/src/main/webapp/WEB-INF/lib/commons-io-2.0.1.jar"/>
+	<classpathentry kind="lib" path="F:/projects java/struts2/src/main/webapp/WEB-INF/lib/commons-lang-2.5.jar"/>
+	<classpathentry kind="lib" path="F:/projects java/struts2/src/main/webapp/WEB-INF/lib/freemarker-2.3.18.jar"/>
+	<classpathentry kind="lib" path="F:/projects java/struts2/src/main/webapp/WEB-INF/lib/javassist-3.11.0.GA.jar"/>
+	<classpathentry kind="lib" path="F:/projects java/struts2/src/main/webapp/WEB-INF/lib/junit-3.8.1.jar"/>
+	<classpathentry kind="lib" path="F:/projects java/struts2/src/main/webapp/WEB-INF/lib/log4j-over-slf4j-1.5.6.jar"/>
+	<classpathentry kind="lib" path="F:/projects java/struts2/src/main/webapp/WEB-INF/lib/ognl-3.0.4.jar"/>
+	<classpathentry kind="lib" path="F:/projects java/struts2/src/main/webapp/WEB-INF/lib/slf4j-api-1.5.10.jar"/>
+	<classpathentry kind="lib" path="F:/projects java/struts2/src/main/webapp/WEB-INF/lib/slf4j-log4j12-1.6.4.jar"/>
+	<classpathentry kind="lib" path="F:/projects java/struts2/src/main/webapp/WEB-INF/lib/sli4j-core-2.0.jar"/>
+	<classpathentry kind="lib" path="F:/projects java/struts2/src/main/webapp/WEB-INF/lib/sli4j-slf4j-logback-2.0.jar"/>
+	<classpathentry kind="lib" path="F:/projects java/struts2/src/main/webapp/WEB-INF/lib/struts2-core-2.3.1.2.jar"/>
+	<classpathentry kind="lib" path="F:/projects java/struts2/src/main/webapp/WEB-INF/lib/xwork-core-2.3.1.2.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

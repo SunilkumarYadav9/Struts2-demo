@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="com.struts2.liqx.demo"
+  id="myeclipse.1330416292909"
+  context-root="/com.struts2.liqx.demo"
+  j2ee-spec="5.0"
+  archive="com.struts2.liqx.demo.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

@@ -1,13 +1,16 @@
-package helloworld;
+package Actions.ActionBase.impl;
+
+import helloworld.LoginAction;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import Actions.ActionBase.ActionBase;
-
 import com.opensymphony.xwork2.ActionSupport;
 
-public class LoginAction extends ActionSupport{
+@SuppressWarnings("serial")
+public class Login  implements ActionBase  {
+
 	private String username="";
 	private String password="";
 	private static Logger log = LoggerFactory.getLogger(LoginAction.class);
@@ -23,7 +26,7 @@ public class LoginAction extends ActionSupport{
 	public void setPassword(String password) {
 		this.password = password;
 	}
-   public String execute(){
+   public String execute() throws Exception{
 	   log.debug(getPassword());
 	   log.debug(getUsername());
 	   if(getUsername().equals("admin") && getPassword().equals("admin")){
@@ -32,4 +35,5 @@ public class LoginAction extends ActionSupport{
 		   return ERROR;
 	   }
    }
+
 }

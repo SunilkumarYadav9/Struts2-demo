@@ -5,7 +5,7 @@
 </head>
 <body>
 <!-- summit the request-->
-<form action="LoginAction.action" method="post">
+<form action="Login.action" method="post">
 	<table align="center">
 		<caption>Login page</caption>
 		<tr>

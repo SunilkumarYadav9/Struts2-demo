@@ -6,5 +6,12 @@
 </head>
 <body>
  		Login success! Welcome ${user}!
+ 		<table>
+ 		<#if books??><#--判断是否存在该变量-->
+ 		<#list books as blist>
+ 			<tr>${blist}</tr>
+ 		</#list>
+ 		</#if>
+ 		</table>
 </body>
 </html>

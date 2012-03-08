@@ -14,7 +14,9 @@
 		
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hibernate.hbm2ddl.auto">create</property>
-		
+		<!-- 设置该属性是使得在控制台下输出数据库操作的语句 -->
+		<property name="show sql">true</property>
 		<mapping resource="Bean/User.hbm.xml"></mapping>
+		
 	</session-factory>
 </hibernate-configuration>

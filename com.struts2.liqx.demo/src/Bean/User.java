@@ -8,21 +8,21 @@ package Bean;
  * 类说明 
  */
 public class User {
-	private int ID;//用来映射数据库表的主键
+	private int id;//用来映射数据库表的主键
 	private String userName;
 	private String pwd;
 	private String email;
 	/**
 	 * @return the iD
 	 */
-	public int getID() {
-		return ID;
+	public int getId() {
+		return id;
 	}
 	/**
 	 * @param iD the iD to set
 	 */
-	public void setID(int iD) {
-		ID = iD;
+	public void setId(int iD) {
+		id = iD;
 	}
 
 	/**

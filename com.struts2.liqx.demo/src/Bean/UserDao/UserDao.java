@@ -3,7 +3,7 @@ package Bean.UserDao;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-
+import Bean.UserDao.HibernateUtil;
 import Bean.User;
 
 /**
@@ -14,11 +14,11 @@ import Bean.User;
  * @since jdk1.6 类说明
  */
 public class UserDao {
+    static HibernateUtil hbUtil = new HibernateUtil();
 	public void addUser(User u) {
 		Session s;
 		Transaction t;
-
-		s = HiberanteUtil.getSession();
+		s = hbUtil.getSession();
 		t = s.getTransaction();
 		try {
 			s.save(u);
@@ -33,7 +33,7 @@ public class UserDao {
 	public static User getUser(int id){
 		Session s = null;
 		try{
-			s = HiberanteUtil.getSession();
+			s = hbUtil.getSession();
 			return (User)s.get(User.class, id);
 		}finally{
 			if(s!=null)

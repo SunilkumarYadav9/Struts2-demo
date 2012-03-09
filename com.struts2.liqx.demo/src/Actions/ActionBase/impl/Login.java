@@ -50,35 +50,33 @@ public class Login implements ActionBase {
 	}
 
 	public String execute() throws Exception {
-		log.debug(getPassword());
-		log.debug(getUsername());
 		HibernateUtil hbUtil = new HibernateUtil();
 		Session sn =hbUtil.getSession();
-		log.info("login");
-		User user = UserDao.getUser(1);
-		if(null != user){
-			log.info("username{0},pwd={1}",user.getUserName(),user.getPwd());
-		}else{log.info("no user.");System.out.println("null");}
-		try {
-			if (user.getUserName().equals("1")
-					&& user.getPwd().equals("1")) {
+		User user = null;
+		try{
+		 user = UserDao.getUser(1);
+		}catch(HibernateException he){
+			log.info(he.getMessage());
+		}finally{
+			sn.close();
+		}
+//		if(null != user){
+//			log.info("username{0},pwd={1}",user.getUserName(),user.getPwd());
+//			System.out.println("user");
+//		}else{log.info("no user.");System.out.println("null");}
+			if (user.getUserName().equals("admin")
+					&& user.getPwd().equals("admin")) {
 				// put user name to the view
 				ActionContext.getContext().getSession().put("user",
-						getUsername());
+						user.getUserName());
 				ActionContext.getContext().getSession()
 						.put("books", getBooks());
-				log.info("login");
-				log.info("username{0},pwd={1}",user.getUserName(),user.getPwd());
-				System.out.println("username="+user.getUserName()+"pwd="+user.getPwd());
+				log.info("username={0},pwd={1}",user.getUserName(),user.getPwd());
+				System.out.println("username="+user.getUserName()+" pwd="+user.getPwd());
 				return SUCCESS;
+			}else{
+				return ERROR;
 			}
-		} catch (HibernateException he) {
-			log.info(he.getMessage());
-			return ERROR;
-		} finally {
-			sn.close();
-			return ERROR;
-		}
 	}
 
 }

@@ -6,7 +6,7 @@
 	<class name="User" table="user"><!--期中table属性是指定数据库中与java类User相对应的表  ，
 	 如果不指定将会使用默认的name相对应的文件名来作为表名-->
 		<id name="id"><!-- table中的主键 -->
-			<generator class="native"></generator>
+			<generator class="identity"></generator>
 		</id>
 		<property name="userName"></property><!-- 将java类中的属性映射到数据库表table（这里是user_tb）
 		的字段;如果不指定column那么系统将会使用name所关联的属性作为数据库中的相应的字段 -->

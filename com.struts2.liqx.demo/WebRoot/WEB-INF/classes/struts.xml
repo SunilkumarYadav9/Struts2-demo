@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="Actions.ActionBase.impl" extends="struts-default">
+		<action name="Login" class="Actions.ActionBase.impl.Login">
+			<result name="success" type="freemarker">/WEB-INF/jsp/helloworld/welcome.jsp</result>
+			<result name="error">/WEB-INF/jsp/helloworld/error.jsp</result>
+			<result name="input">/WEB-INF/jsp/hellowrld/helloworld.jsp</result>
+		</action>
+	</package>
+</struts>

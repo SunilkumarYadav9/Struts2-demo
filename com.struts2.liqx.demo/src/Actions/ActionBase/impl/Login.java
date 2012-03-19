@@ -33,7 +33,7 @@ public class Login implements ActionBase {
 	}
 
 	public String getUsername() {
-		return username;
+		return username; 
 	}
 
 	public void setUsername(String username) {
@@ -47,10 +47,13 @@ public class Login implements ActionBase {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
+/**
+ * 用户登录验证：采用hibernate 与数据库交互，当用户输入信息正确（数据库中存在该用户）则返回SUCCESS，否则返回ERROR。
+ */
 	public String execute() throws Exception {
 		HibernateUtil hbUtil = new HibernateUtil();
 		Session sn = hbUtil.getSession();
+		log.debug("*************************************************");
 		User user = null;
 		try {
 			user = UserDao.getUser(1);
@@ -64,11 +67,12 @@ public class Login implements ActionBase {
 			ActionContext.getContext().getSession().put("user",
 					user.getUserName());
 			ActionContext.getContext().getSession().put("books", getBooks());
-			log.info("username={0},pwd={1}", user.getUserName(), user.getPwd());
+			log.debug("username={},pwd={}", user.getUserName(), user.getPwd());
 			System.out.println("username=" + user.getUserName() + " pwd="
 					+ user.getPwd());
 			return SUCCESS;
 		} else {
+			log.debug("illegal account or password.\n");
 			return ERROR;
 		}
 	}
